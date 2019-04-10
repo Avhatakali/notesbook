@@ -1,0 +1,27 @@
+<header>
+  <nav class="navbar navbar-inverse">
+    <div class="navbar-header">
+      <h1>Notebook</h1>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <% if user_signed_in? %>
+      <p>
+        <%= current_user.first_name %>
+        <%= current_user.last_name %>
+      </p>
+      <ul>
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'Note', new_note_path %></li>
+        <li><%= link_to 'Profile', edit_user_registration_path %></li>
+        <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
+      </ul>
+      <% else %>
+      <ul>
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'Log In', new_user_session_path %></li>
+        <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+      </ul>
+      <% end %>
+    </ul>
+  </nav>
+</header>

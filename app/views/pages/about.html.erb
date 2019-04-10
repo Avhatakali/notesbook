@@ -1,2 +1,7 @@
-<h1>About page</h1>
-<%= link_to 'Home', page_path('home') %>
+<% content_for :top_content do %>
+  <div class="jumbotron">
+    <div class="container">
+      <h1>About page</h1>
+    </div>
+  </div>
+<% end %>

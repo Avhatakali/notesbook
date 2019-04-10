@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-# shumisanu hei uswika nichi fhedza nga devise, nido kona ushumisa ire hafho fhasi
+  root 'pages#home'
+  get  'pages/home'
+  get  'pages/about'
+  get  'pages/contact'
+  resources:notes
 
-  get "/pages/*id" => 'pages#home', as: :page, format: false
-    root to: 'pages#home', id: 'home'
+  devise_for :users, controllers: {
+      sessions: 'users/sessions'
+    }
 end
