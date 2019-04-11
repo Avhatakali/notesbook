@@ -1,0 +1,13 @@
+<h1>user's notes</h1>
+<% if @notes.present? %>
+<table>
+  <% @notes.each do |note|  %>
+    <tr>
+      <td><%= note.content %></td>
+      <td><%= note.created_at.strftime("%d %B %Y, %H:%M ") %></td>
+    </tr>
+  <% end %>
+</table>
+<% else %>
+  <h4>create notes</h4>
+<% end %>

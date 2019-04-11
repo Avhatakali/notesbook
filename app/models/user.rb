@@ -5,8 +5,4 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :confirmable, :lockable
-
-  def feed
-    Note.where("user_id = ?", id)
-  end
 end

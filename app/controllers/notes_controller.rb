@@ -1,10 +1,8 @@
 class NotesController < ApplicationController
 
   def index
-    @user = User.find(params[:id])
-    @note = @user.notes
+    @notes = current_user.notes
   end
-
   def new
     @note = Note.new
   end

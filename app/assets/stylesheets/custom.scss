@@ -45,10 +45,6 @@ footer a:hover {
   color: #222;
 }
 
-footer small {
-  float: left;
-}
-
 footer ul {
   float: right;
   list-style: none;
@@ -57,4 +53,29 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 15px;
+}
+
+header{
+  ul {
+    float: right;
+    list-style: none;
+  }
+
+  ul li {
+    float: left;
+    margin-left: 15px;
+  }
+}
+
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+body {
+  align-content: center;
 }
